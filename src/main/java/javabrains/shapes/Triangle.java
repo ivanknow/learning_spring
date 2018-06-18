@@ -1,7 +1,18 @@
 package javabrains.shapes;
 
 public class Triangle {
-public void draw() {
-	System.out.println("Draw Triangle");
-}
+	private String type;
+
+	public void draw() {
+		System.out.println("Draw Triangle");
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+	
 }
