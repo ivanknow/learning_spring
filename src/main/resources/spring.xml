@@ -11,6 +11,8 @@
 
 	<!-- <context:component-scan base-package="main"/> -->
 	<bean id="triangle" class="javabrains.shapes.Triangle">
-		<property name="type" value="Triangle"></property>
+		<!-- <property name="type" value="Triangle"></property> -->
+	<constructor-arg type="int" value="25"></constructor-arg>
+	<constructor-arg type="java.lang.String" value="type"></constructor-arg>
 	</bean>
 </beans>
