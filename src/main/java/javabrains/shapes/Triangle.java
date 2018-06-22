@@ -31,7 +31,7 @@ public class Triangle {
 	}
 
 	public void draw() {
-	 System.out.println(a);
+		 System.out.println(a);	 System.out.println(b);	 System.out.println(c);
 		
 	}
 
