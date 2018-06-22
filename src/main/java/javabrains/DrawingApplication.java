@@ -10,7 +10,7 @@ public static void main(String[] args) {
 	//Triangle t = new Triangle();
 	ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 	Triangle t = (Triangle) context.getBean("triangle");
-	System.out.println(t.getType());
+	
 	t.draw();
 }
 }

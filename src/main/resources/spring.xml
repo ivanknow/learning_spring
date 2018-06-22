@@ -10,9 +10,25 @@
 	                       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
 	<!-- <context:component-scan base-package="main"/> -->
+	
 	<bean id="triangle" class="javabrains.shapes.Triangle">
-		<!-- <property name="type" value="Triangle"></property> -->
-	<constructor-arg type="int" value="25"></constructor-arg>
-	<constructor-arg type="java.lang.String" value="type"></constructor-arg>
+	<property name="a" ref="zeroPoint"></property>
+	<property name="b" ref="point2"></property>
+	<property name="c" ref="point3"></property>
 	</bean>
+	
+	<bean id="zeroPoint" class="javabrains.shapes.Point">
+		<property name="x" value="0"></property>
+		<property name="y" value="0"></property>
+	</bean>
+	<bean id="point2" class="javabrains.shapes.Point">
+		<property name="x" value="-20"></property>
+		<property name="y" value="0"></property>
+	</bean>
+	<bean id="point3" class="javabrains.shapes.Point">
+		<property name="x" value="20"></property>
+		<property name="y" value="0"></property>
+	</bean>
+	
+	
 </beans>
