@@ -13,18 +13,18 @@
 
 	<!-- <context:component-scan base-package="main"/> -->
 
-	<bean id="triangle" class="javabrains.shapes.Triangle">
-		<property name="a" ref="zeroPoint"></property>
-		<property name="b" ref="point2"></property>
-		<property name="c">
-			<bean class="javabrains.shapes.Point">
-				<property name="x" value="20"></property>
-				<property name="y" value="0"></property>
-			</bean>
+	<bean id="triangle" class="javabrains.shapes.Triangle" autowire="byName">
+		<property name="points">
+			<list>
+				<ref bean="zeroPoint"/>
+				<ref bean="point2"/>
+				<ref bean="point3"/>
+			</list>
 		</property>
+		
 	</bean>
 
-	<bean id="zeroPoint" class="javabrains.shapes.Point">
+<bean id="zeroPoint" class="javabrains.shapes.Point">
 		<property name="x" value="0"></property>
 		<property name="y" value="0"></property>
 	</bean>
@@ -32,5 +32,15 @@
 		<property name="x" value="-20"></property>
 		<property name="y" value="0"></property>
 	</bean>
+	<bean id="point3" class="javabrains.shapes.Point">
+		<property name="x" value="20"></property>
+		<property name="y" value="0"></property>
+	</bean>
+	
+	<bean id="style" class="javabrains.shapes.Style">
+		<property name="color" value="Blue"></property>
+		<property name="border_color" value="Gray"></property>
+	</bean>
+	
 
 </beans>

@@ -1,38 +1,36 @@
 package javabrains.shapes;
 
+import java.util.List;
+
 public class Triangle {
-	private Point a, b, c;
-
-	public Point getA() {
-		return a;
-	}
-
-	public void setA(Point a) {
-		this.a = a;
-	}
-
-	public Point getB() {
-		return b;
-	}
-
-	public void setB(Point b) {
-		this.b = b;
-	}
-
-	public Point getC() {
-		return c;
-	}
-
-	public void setC(Point c) {
-		this.c = c;
-	}
+	private Style style;
+	private List<Point> points;
 
 	public Triangle() {
 	}
 
+	public List<Point> getPoints() {
+		return points;
+	}
+
+	public void setPoints(List<Point> points) {
+		this.points = points;
+	}
+
+	public Style getStyle() {
+		return style;
+	}
+
+	public void setStyle(Style style) {
+		this.style = style;
+	}
+
 	public void draw() {
-		 System.out.println(a);	 System.out.println(b);	 System.out.println(c);
-		
+
+		System.out.println(style);
+		for (Point p : points) {
+			System.out.println(p);
+		}
 	}
 
 }
