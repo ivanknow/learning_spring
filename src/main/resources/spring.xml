@@ -13,7 +13,7 @@
 
 	<!-- <context:component-scan base-package="main"/> -->
 
-	<bean id="triangle" class="javabrains.shapes.Triangle" autowire="byName">
+	<bean id="triangle" class="javabrains.shapes.Triangle" autowire="byName" scope="singleton">
 		<property name="points">
 			<list>
 				<ref bean="zeroPoint"/>
@@ -37,7 +37,7 @@
 		<property name="y" value="0"></property>
 	</bean>
 	
-	<bean id="style" class="javabrains.shapes.Style">
+	<bean id="style" class="javabrains.shapes.Style" scope="prototype">
 		<property name="color" value="Blue"></property>
 		<property name="border_color" value="Gray"></property>
 	</bean>
